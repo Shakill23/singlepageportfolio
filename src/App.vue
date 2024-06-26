@@ -16,7 +16,15 @@ export default {
   components: {
     NavBar,
     Footer
-  }
+  },
+  computed: {
+    jobTitle() {
+      return this.$store.state.jobTitle
+    }
+  },
+  mounted(){
+    this.$store.dispatch('fetchJobTitle')
+  },
 }
 </script>
 
